@@ -1,9 +1,13 @@
 <template>
   <div class="nav">
-    <nuxt-link to="/" class="brand"> Real World Events </nuxt-link>
+    <nuxt-link :to="`/${activeLanguage}/`" class="brand">
+      Teluk Biru Karya
+    </nuxt-link>
     <nav>
-      <nuxt-link to="/"> List </nuxt-link> |
-      <nuxt-link to="/event/create"> Create </nuxt-link>
+      <nuxt-link :to="`/${activeLanguage}/`"> Home </nuxt-link> |
+      <nuxt-link :to="`/${activeLanguage}/about`"> About </nuxt-link> |
+      <nuxt-link :to="`/${activeLanguage}/brands`"> Brands </nuxt-link> |
+      <nuxt-link :to="`/${activeLanguage}/contact`"> Contact </nuxt-link> |
     </nav>
     <!-- <v-navigation-drawer
       v-model="drawer"
@@ -53,6 +57,7 @@
 export default {
   data() {
     return {
+      activeLanguage: 'en',
       clipped: false,
       drawer: false,
       fixed: false,

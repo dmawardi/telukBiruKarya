@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Create an Event</h1>
+    <h1>Contact Page</h1>
   </div>
 </template>
 
@@ -9,13 +9,14 @@ export default {
   head() {
     return {
       // title for this page
-      title: 'Create an Event',
+      title: 'Contact Us',
       meta: [
         {
           // defines decription for this page
           hid: 'description',
           name: 'description',
-          content: 'You can create a new event in your neighborhood',
+          content:
+            'Feel free to contact us with any business related enquiries',
         },
       ],
     }
