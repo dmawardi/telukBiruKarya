@@ -1,5 +1,5 @@
 <template>
-  <v-app dark id="app">
+  <v-app id="app">
     <NavBar />
     <v-main>
       <v-container>
@@ -16,7 +16,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer> -->
-    <v-footer :absolute="!fixed" app>
+    <v-footer app>
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
@@ -25,14 +25,29 @@
 <script>
 import NavBar from '../components/NavBar.vue'
 export default {
+  components: {
+    NavBar,
+  },
   data() {
     return {
       right: true,
       rightDrawer: false,
     }
   },
-  components: {
-    NavBar,
+  head() {
+    return {
+      // title for this page
+      titleTemplate: '%s = Real World Events',
+      meta: [
+        {
+          // defines decription for this page
+          hid: 'description',
+          name: 'description',
+          content:
+            'Where you can find all the events taking place in your neighborhood',
+        },
+      ],
+    }
   },
 }
 </script>
