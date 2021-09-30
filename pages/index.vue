@@ -3,7 +3,7 @@
 <script>
 export default {
   fetch({ redirect }) {
-    redirect('en')
+    redirect('/en')
   },
 }
 </script>

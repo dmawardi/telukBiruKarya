@@ -6,19 +6,9 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+// import { mapState } from 'vuex'
 export default {
   // fetch is similar to asyncdata, however, works in both universal and ssr mode
-  async fetch({ store, error }) {
-    try {
-      await store.dispatch('web-text/fetchLanguageAndSet', 'en')
-    } catch (e) {
-      return error({
-        statusCode: 503,
-        message: 'Unable to detect language.',
-      })
-    }
-  },
 
   // property used by vue meta
   head() {
@@ -36,9 +26,10 @@ export default {
     }
   },
   // maps a computed property with a vuex property
-  computed: mapState({
-    events: (state) => state.events.events,
-  }),
+  // computed: mapState({
+  //   currentLanguageData: (state) => state.webText.currentLanguageData,
+  //   activeLanguage: (state) => state.webText.activeLanguage,
+  // }),
 }
 </script>
 
