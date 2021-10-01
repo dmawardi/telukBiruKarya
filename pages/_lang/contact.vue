@@ -1,11 +1,17 @@
 <template>
   <div>
-    <h1>Contact Page</h1>
+    <v-card>
+      <contact-form />
+    </v-card>
   </div>
 </template>
 
 <script>
+import ContactForm from '@/components/ContactForm.vue'
 export default {
+  components: {
+    ContactForm,
+  },
   head() {
     return {
       // title for this page

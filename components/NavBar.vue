@@ -1,15 +1,5 @@
 <template>
   <div class="nav">
-    <!-- <nuxt-link :to="`/${activeLanguage}/`" class="brand">
-      Teluk Biru Karya
-    </nuxt-link>
-    <nav>
-      <nuxt-link :to="`/${activeLanguage}/`"> Home </nuxt-link> |
-      <nuxt-link :to="`/${activeLanguage}/about`"> About </nuxt-link> |
-      <nuxt-link :to="`/${activeLanguage}/brands`"> Brands </nuxt-link> |
-      <nuxt-link :to="`/${activeLanguage}/contact`"> Contact </nuxt-link> |
-    </nav> -->
-    <!-- <v-card class="mx-auto overflow-hidden" height="400"> -->
     <v-app-bar color="secondary">
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
@@ -56,8 +46,6 @@
       </v-list>
     </v-navigation-drawer>
   </div>
-
-  <!-- </v-card> -->
 </template>
 
 <script>

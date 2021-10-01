@@ -19,12 +19,14 @@ export const mutations = {
 export const actions = {
   fetchLanguageAndSet({ commit }, language) {
     try {
-      console.log('Switching state language to:', language)
+      console.log('State language request to:', language)
 
-      commit('SET_ACTIVE_LANGUAGE', language)
-      console.log('set active complete')
-      const languageData = db[language]
-      return commit('SET_LANGUAGE_DATA', languageData)
+      if (language !== undefined) {
+        commit('SET_ACTIVE_LANGUAGE', language)
+        console.log('set active complete')
+        const languageData = db[language]
+        return commit('SET_LANGUAGE_DATA', languageData)
+      }
     } catch (error) {
       return error.message
     }
