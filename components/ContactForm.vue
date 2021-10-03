@@ -58,6 +58,7 @@
               hint="Why are you reaching out today?"
               full-width
             ></v-textarea>
+            <br />
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn class="submit-button">Submit</v-btn>
