@@ -1,7 +1,8 @@
 <template>
   <div>
-    <h1>Home</h1>
-    <div></div>
+    <v-parralax src="/Teluk_Biru.PNG">
+      <h1>Home</h1>
+    </v-parralax>
   </div>
 </template>
 

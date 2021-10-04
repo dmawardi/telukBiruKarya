@@ -6,6 +6,12 @@ export default {
     contact: {
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam, sapien finibus ultrices tristique, tellus mauris venenatis lectus, ut volutpat diam sem vitae odio. Maecenas vel rutrum massa, in placerat metus. Nullam euismod risus ipsum, non laoreet tellus condimentum ac. Quisque luctus ligula eget tortor euismod, quis gravida massa euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     },
+    about: {
+      aboutSubtitle:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam, sapien finibus ultrices tristique, tellus mauris venenatis lectus, ut volutpat diam sem vitae odio',
+      aboutText:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam, sapien finibus ultrices tristique, tellus mauris venenatis lectus, ut volutpat diam sem vitae odio. Maecenas vel rutrum massa, in placerat metus. Nullam euismod risus ipsum, non laoreet tellus condimentum ac. Quisque luctus ligula eget tortor euismod, quis gravida massa euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam, sapien finibus ultrices tristique, tellus mauris venenatis lectus, ut volutpat diam sem vitae odio. Maecenas vel rutrum massa, in placerat metus. Nullam euismod risus ipsum, non laoreet tellus condimentum ac. Quisque luctus ligula eget tortor euismod, quis gravida massa euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
     brands: {
       list: [
         {
