@@ -1,8 +1,8 @@
 <template>
   <v-app id="app">
     <NavBar />
-    <v-main>
-      <v-container>
+    <v-main class="grey lighten-2">
+      <v-container fluid class="white">
         <Nuxt />
       </v-container>
     </v-main>

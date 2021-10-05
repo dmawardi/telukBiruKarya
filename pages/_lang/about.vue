@@ -1,13 +1,14 @@
 <template>
   <div>
     <v-card>
-      <v-img
+      <parallax />
+      <!-- <v-img
         class="ml-auto mr-auto"
         min-height="100px"
         max-height="350px"
         min-width="200px"
         src="https://picsum.photos/id/11/500/300"
-      ></v-img>
+      ></v-img> -->
     </v-card>
     <v-card class="white mb-5">
       <v-row>
@@ -27,14 +28,14 @@
               {{ member.name }}
             </p>
           </v-card-title>
-          <v-img
-            class="ml-auto mr-auto"
-            min-height="100px"
-            max-height="200px"
-            min-width="70px"
-            max-width="150px"
-            src="https://picsum.photos/id/11/500/300"
-          ></v-img>
+
+          <v-row>
+            <v-col cols="12" class="d-flex justify-center">
+              <v-avatar color="teal" size="120"
+                >{{ member.initials }}
+              </v-avatar>
+            </v-col>
+          </v-row>
           <v-card-text>
             <p class="text-caption text-justify">
               <strong> Background: </strong>
@@ -49,8 +50,8 @@
       </v-row>
       <v-divider></v-divider>
       <v-row>
-        <v-col cols="7"></v-col>
-        <v-col cols="5">
+        <v-col v-show="!smallScreen" cols="6"></v-col>
+        <v-col cols="6">
           <v-card-title class="text-decoration-underline mt-3"
             >About</v-card-title
           >
@@ -125,9 +126,9 @@
           <v-img
             class="ml-auto mr-auto"
             min-height="100px"
-            :max-height="mobile ? '150px' : '300px'"
+            :max-height="mobile ? '200px' : '300px'"
             min-width="100px"
-            :max-width="mobile ? '200px' : '400px'"
+            :max-width="mobile ? '250px' : '400px'"
             src="https://picsum.photos/seed/picsum/400/300"
           ></v-img>
         </v-col>
@@ -138,8 +139,12 @@
 
 <script>
 import { mapState } from 'vuex'
+import Parallax from '@/components/Parallax.vue'
 
 export default {
+  components: {
+    Parallax,
+  },
   data() {
     return {
       team: [
@@ -147,6 +152,8 @@ export default {
           name: 'Calvin Santoso',
           role: 'Founder/Primary Director',
           mail: 'cSantoso@telukbirukarya.com',
+          initials: 'CS',
+
           background:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam, sapien finibus ultrices tristique.',
         },
@@ -154,6 +161,7 @@ export default {
           name: 'Danar Mawardi',
           role: 'Founder/Strategy Director',
           mail: 'dMawardi@telukbirukarya.com',
+          initials: 'DM',
           background:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam, sapien finibus ultrices tristique.',
         },
@@ -185,6 +193,14 @@ export default {
     }),
     mobile() {
       return this.$vuetify.breakpoint.xs
+      // if (this.$vuetify.breakpoint.sm || this.$vuetify.breakpoint.xs) {
+      //   return true
+      // } else {
+      //   return false
+      // }
+    },
+    smallScreen() {
+      return this.$vuetify.breakpoint.sm
       // if (this.$vuetify.breakpoint.sm || this.$vuetify.breakpoint.xs) {
       //   return true
       // } else {
