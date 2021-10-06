@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <v-container>
     <v-card>
       <contact-form />
     </v-card>
-  </div>
+  </v-container>
 </template>
 
 <script>

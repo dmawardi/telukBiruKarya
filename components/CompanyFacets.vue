@@ -16,7 +16,7 @@
                 <v-card-title class="justify-center">{{
                   item.aspectTitle
                 }}</v-card-title>
-                <v-icon size="100" :color="item.color">
+                <v-icon size="100" :color="item.color" class="iconFade">
                   {{ item.icon }}
                 </v-icon>
                 <v-card-text>
@@ -69,4 +69,19 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.iconFade {
+  animation: fadeInAnimation ease 6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+</style>

@@ -4,12 +4,13 @@
       <v-col cols="12">
         <v-parallax
           fluid
-          src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+          height="590"
+          src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
         >
           <v-row align="center" justify="center" class="ma-0 pa-0">
             <v-col cols="12">
               <h1 class="text-h4 font-weight-thin mb-4">
-                The Future... balanced
+                The future... balanced
               </h1>
               <!-- <h4 class="subheading">without preconceptions</h4> -->
               <v-btn outlined :href="`${this.activeLanguage}/contact`">
@@ -22,70 +23,60 @@
     </v-row>
     <v-row>
       <v-col cols="12" class="ma-0 pa-0">
-        <v-card min-height="120px" class="ma-0 pa-0">
-          <v-card-title>Banner slogan</v-card-title>
+        <v-card color="primary darken-1" min-height="140px" class="ma-0 pa-0">
+          <v-row>
+            <v-col class="d-flex align-center justify-center">
+              <p
+                :class="
+                  mobile
+                    ? 'text-subtitle white--text ma-4'
+                    : 'text-h6 white--text ma-4'
+                "
+              >
+                "Innovation distinguishes between a leader and a follower"
+              </p>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col cols="7"></v-col>
+            <v-col cols="5">
+              <p class="mr-4 text-subtitle white--text">-Steve Jobs</p>
+            </v-col>
+          </v-row>
         </v-card>
       </v-col>
     </v-row>
-    <v-row class="ma-4">
-      <v-col cols="12" sm="8">
-        <v-row>
-          <v-col cols="4">
-            <v-img
-              class="ma-auto"
-              min-height="100px"
-              :max-height="mobile ? '200px' : '500px'"
-              min-width="80px"
-              max-width="400px"
-              src="https://picsum.photos/seed/picsum/400/300"
-            ></v-img>
-          </v-col>
-          <v-col cols="8" class="d-flex align-center">
-            <p class="text-justify text-h5">
-              {{ this.currentLanguageData.data.index.mission }}
-            </p>
-          </v-col>
-        </v-row>
-        <br />
-        <v-divider></v-divider>
-        <br />
-        <v-row>
-          <v-col cols="8" class="d-flex align-center">
-            <p class="text-justify text-h5">
-              {{ this.currentLanguageData.data.index.vision }}
-            </p>
-          </v-col>
-          <v-col cols="4">
-            <v-img
-              class="ma-auto"
-              min-height="100px"
-              :max-height="mobile ? '200px' : '500px'"
-              min-width="80px"
-              max-width="400px"
-              src="https://picsum.photos/seed/picsum/400/300"
-            ></v-img>
-          </v-col>
-        </v-row>
-      </v-col>
-      <v-col cols="12" sm="4" height="300px">
-        <v-img
-          class="ma-auto"
-          min-height="100px"
-          :max-height="mobile ? '120px' : '500px'"
-          min-width="80px"
-          max-width="400px"
-          src="https://picsum.photos/seed/picsum/400/300"
-        ></v-img>
-      </v-col>
-    </v-row>
 
-    <landing-content />
+    <vision-mission />
+    <company-facets />
     <v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
       <v-row align="center" justify="center" class="ma-0 pa-0">
         <v-col cols="12" class="text-center">
-          <h1 class="text-h4 font-weight-thin mb-4">Stay in touch</h1>
+          <h1 class="text-h5 font-weight-thin mb-4">
+            Stay in touch with what we are up to
+          </h1>
           <!-- <h4 class="subheading">without preconceptions</h4> -->
-          <v-btn :href="`${this.activeLanguage}/contact`"> Email me! </v-btn>
+          <v-form @submit.prevent="submit">
+            <v-container class="emailBox">
+              <v-row class="text-center">
+                <v-text-field
+                  v-model="email"
+                  :rules="emailRules"
+                  clearable
+                  filled
+                  dense
+                  single-line
+                  solo-inverted
+                  prepend-icon="mdi-email"
+                  color="primary lighten-2"
+                  label="E-mail"
+                  class="ml-auto mr-auto"
+                  required
+                ></v-text-field>
+                <v-btn height="40px" class="ml-auto mr-auto"> email me </v-btn>
+              </v-row>
+            </v-container>
+          </v-form>
         </v-col>
       </v-row>
     </v-parallax>
@@ -94,10 +85,21 @@
 
 <script>
 import { mapState } from 'vuex'
-import LandingContent from '@/components/LandingContent.vue'
+import CompanyFacets from '~/components/CompanyFacets.vue'
+import VisionMission from '@/components/VisionMission.vue'
 export default {
   components: {
-    LandingContent,
+    CompanyFacets,
+    VisionMission,
+  },
+  data() {
+    return {
+      email: '',
+      emailRules: [
+        (v) => !!v || 'E-mail is required',
+        (v) => /.+@.+/.test(v) || 'E-mail must be valid',
+      ],
+    }
   },
   // property used by vue meta
   head() {
@@ -115,11 +117,25 @@ export default {
     }
   },
   // maps a computed property with a vuex property
-  computed: mapState({
-    currentLanguageData: (state) => state.webText.currentLanguageData,
-    activeLanguage: (state) => state.webText.activeLanguage,
-  }),
+  computed: {
+    ...mapState({
+      currentLanguageData: (state) => state.webText.currentLanguageData,
+      activeLanguage: (state) => state.webText.activeLanguage,
+    }),
+    mobile() {
+      return this.$vuetify.breakpoint.xs
+      // if (this.$vuetify.breakpoint.sm || this.$vuetify.breakpoint.xs) {
+      //   return true
+      // } else {
+      //   return false
+      // }
+    },
+  },
 }
 </script>
 
-<style></style>
+<style scoped>
+.emailBox {
+  max-width: 400px;
+}
+</style>

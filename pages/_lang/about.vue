@@ -1,14 +1,17 @@
 <template>
   <div>
     <v-card>
-      <parallax />
-      <!-- <v-img
-        class="ml-auto mr-auto"
-        min-height="100px"
-        max-height="350px"
-        min-width="200px"
-        src="https://picsum.photos/id/11/500/300"
-      ></v-img> -->
+      <v-parallax
+        dark
+        src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+      >
+        <v-row align="center" justify="center">
+          <v-col class="text-center" cols="12">
+            <h4 class="subheading">A little</h4>
+            <h1 class="text-h4 font-weight-thin mb-4">About Us</h1>
+          </v-col>
+        </v-row>
+      </v-parallax>
     </v-card>
     <v-card class="white mb-5">
       <v-row>
@@ -50,8 +53,7 @@
       </v-row>
       <v-divider></v-divider>
       <v-row>
-        <v-col v-show="!smallScreen" cols="6"></v-col>
-        <v-col cols="6">
+        <v-col cols="12">
           <v-card-title class="text-decoration-underline mt-3"
             >About</v-card-title
           >
@@ -139,12 +141,9 @@
 
 <script>
 import { mapState } from 'vuex'
-import Parallax from '@/components/Parallax.vue'
 
 export default {
-  components: {
-    Parallax,
-  },
+  components: {},
   data() {
     return {
       team: [

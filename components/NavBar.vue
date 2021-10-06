@@ -1,6 +1,6 @@
 <template>
   <div class="nav">
-    <v-app-bar color="white">
+    <v-app-bar color="white" fixed elevate-on-scroll>
       <v-app-bar-nav-icon
         v-show="mobile"
         @click="drawer = true"
@@ -23,11 +23,24 @@
         v-for="(item, index) in items"
         v-show="!mobile"
         :key="`${index}-navbar`"
-        :to="item.to"
+        :to="`/${activeLanguage}/${item.to}`"
       >
-        <v-tab>{{ item.title }}</v-tab>
-        <!-- <v-btn class="ma-1" color="white" outlined> -->
-        <!-- </v-btn> -->
+        <v-btn v-show="!mobile" class="ma-1" color="primary">{{
+          item.title
+        }}</v-btn>
+      </nuxt-link>
+      <nuxt-link
+        v-show="!mobile"
+        :key="`${focusItem.title}-navbar`"
+        :to="`/${activeLanguage}/${focusItem.to}`"
+      >
+        <v-btn
+          v-show="!mobile"
+          class="ma-1"
+          color="secondary darken-2"
+          outlined
+          >{{ focusItem.title }}</v-btn
+        >
       </nuxt-link>
       <v-btn
         v-show="!mobile"
@@ -75,24 +88,25 @@ export default {
         {
           icon: 'mdi-home',
           title: 'Home',
-          to: `/${this.activeLanguage}/`,
+          to: ``,
         },
-        {
-          icon: 'mdi-account',
-          title: 'Contact us',
-          to: `/${this.activeLanguage}/contact`,
-        },
+
         {
           icon: 'mdi-info',
           title: 'About',
-          to: `/${this.activeLanguage}/about`,
+          to: `about`,
         },
         {
           icon: 'mdi-account',
           title: 'Brands',
-          to: `/${this.activeLanguage}/brands`,
+          to: `brands`,
         },
       ],
+      focusItem: {
+        icon: 'mdi-account',
+        title: 'Contact us',
+        to: `contact`,
+      },
 
       title: 'Home',
     }
@@ -127,11 +141,6 @@ export default {
     }),
     mobile() {
       return this.$vuetify.breakpoint.xs
-      // if (this.$vuetify.breakpoint.sm || this.$vuetify.breakpoint.xs) {
-      //   return true
-      // } else {
-      //   return false
-      // }
     },
   },
   methods: {
