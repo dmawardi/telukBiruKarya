@@ -35,7 +35,7 @@
             <v-card-text>{{ brand.subtext }}</v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn class="ma-2">More</v-btn>
+              <v-btn :href="brand.to" class="ma-2">More</v-btn>
             </v-card-actions>
           </v-col>
         </v-row>

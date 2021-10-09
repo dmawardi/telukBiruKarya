@@ -9,7 +9,8 @@
             <v-row>
               <!-- Iterate through company facets/aspects -->
               <v-col
-                v-for="(item, index) in companyFacets"
+                v-for="(item, index) in this.currentLanguageData.data.index
+                  .companyFacets"
                 :key="`${index}-aspects`"
                 cols="12"
                 sm="6"
@@ -39,33 +40,16 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   data() {
-    return {
-      companyFacets: [
-        {
-          aspectTitle: 'Aspect 1',
-          icon: 'mdi-bullseye-arrow',
-          aspectCaption:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-          color: 'red',
-        },
-        {
-          aspectTitle: 'Aspect 2',
-          icon: 'mdi-mouse',
-          aspectCaption:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-          color: 'grey',
-        },
-        {
-          aspectTitle: 'Aspect 3',
-          icon: 'mdi-chart-areaspline',
-          aspectCaption:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-          color: 'black',
-        },
-      ],
-    }
+    return {}
+  },
+  computed: {
+    ...mapState({
+      currentLanguageData: (state) => state.webText.currentLanguageData,
+      activeLanguage: (state) => state.webText.activeLanguage,
+    }),
   },
 }
 </script>

@@ -4,7 +4,7 @@
     <v-row class="ma-2">
       <!-- Iterate through brands -->
       <brand-card
-        v-for="(brand, index) in brands"
+        v-for="(brand, index) in this.currentLanguageData.data.brands.list"
         :key="`brand-${index}`"
         :brand="brand"
       />
@@ -13,7 +13,9 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import BrandCard from '@/components/BrandCard.vue'
+
 export default {
   components: { BrandCard },
   data() {
@@ -30,6 +32,18 @@ export default {
         },
       ],
     }
+  },
+  computed: {
+    ...mapState({
+      currentLanguageData: (state) => state.webText.currentLanguageData,
+      activeLanguage: (state) => state.webText.activeLanguage,
+    }),
+    mobile() {
+      return this.$vuetify.breakpoint.xs
+    },
+    smallScreen() {
+      return this.$vuetify.breakpoint.sm
+    },
   },
 }
 </script>

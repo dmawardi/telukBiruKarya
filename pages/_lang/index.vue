@@ -9,14 +9,9 @@
               <p class="text-h4 font-weight-bold mb-4 text-uppercase">
                 Innovation magnified
               </p>
-              <v-btn
-                color="secondary"
-                outlined
-                large
-                :href="`${this.activeLanguage}/contact`"
-              >
-                Contact us
-              </v-btn>
+              <nuxt-link :to="`/${this.activeLanguage}/contact`">
+                <v-btn color="secondary" outlined large> Contact us </v-btn>
+              </nuxt-link>
             </v-col>
           </v-row>
         </v-parallax>
@@ -25,7 +20,7 @@
     <v-row>
       <v-col cols="12" class="ma-0 pa-0">
         <!-- Banner -->
-        <v-card color="primary darken-1" min-height="140px" class="ma-0 pa-0">
+        <v-card color="primary lighten-1" min-height="140px" class="ma-0 pa-0">
           <v-row>
             <v-col class="d-flex align-center justify-center">
               <p
@@ -56,11 +51,12 @@
     <v-parallax :src="parallaxImageBot">
       <v-row align="center" justify="center" class="ma-0 pa-0">
         <v-col cols="12" class="text-center">
-          <h1 class="text-h5 font-weight-thin mb-4">
-            Stay in touch with what we are up to
-          </h1>
+          <h1 class="text-h5 font-weight-thin mb-4">Reach out to us</h1>
+          <nuxt-link :to="`/${this.activeLanguage}/contact`">
+            <v-btn color="secondary" outlined large> Contact us </v-btn>
+          </nuxt-link>
           <!-- Email submission -->
-          <v-form @submit.prevent="submit">
+          <!-- <v-form @submit.prevent="submit">
             <v-container class="emailBox">
               <v-row class="text-center">
                 <v-text-field
@@ -81,7 +77,7 @@
                 <v-btn height="40px" class="ml-auto mr-auto"> email me </v-btn>
               </v-row>
             </v-container>
-          </v-form>
+          </v-form> -->
         </v-col>
       </v-row>
     </v-parallax>
