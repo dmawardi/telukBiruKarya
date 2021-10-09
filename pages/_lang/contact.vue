@@ -1,9 +1,7 @@
 <template>
-  <v-container>
-    <v-card>
-      <contact-form />
-    </v-card>
-  </v-container>
+  <v-card class="mt-9 mb-9">
+    <contact-form />
+  </v-card>
 </template>
 
 <script>

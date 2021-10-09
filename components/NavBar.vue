@@ -1,21 +1,29 @@
 <template>
   <div class="nav">
     <v-app-bar color="white" fixed elevate-on-scroll>
+      <!-- Burger icon (shown when mobile) -->
       <v-app-bar-nav-icon
         v-show="mobile"
         @click="drawer = true"
       ></v-app-bar-nav-icon>
-      <!-- <v-spacer v-show="mobile"></v-spacer> -->
 
+      <!-- Image -->
       <v-img
         class="ml-auto mr-auto"
         min-height="50px"
         max-height="50"
         max-width="60"
         min-width="42px"
-        src="/Teluk_Biru.PNG"
+        src="/Teluk_Biru_Web.PNG"
       ></v-img>
-      <v-toolbar-title v-show="!mobile">Teluk Biru Karya</v-toolbar-title>
+      <!-- Title text -->
+      <v-app-bar-title
+        v-show="!mobile"
+        mobile-break-point="1264"
+        class="primary--text"
+      >
+        Teluk Biru Karya
+      </v-app-bar-title>
 
       <v-spacer v-show="!mobile"></v-spacer>
       <!-- Buttons appear if not on mobile -->
@@ -25,33 +33,18 @@
         :key="`${index}-navbar`"
         :to="`/${activeLanguage}/${item.to}`"
       >
-        <v-btn v-show="!mobile" class="ma-1" color="primary">{{
-          item.title
-        }}</v-btn>
-      </nuxt-link>
-      <nuxt-link
-        v-show="!mobile"
-        :key="`${focusItem.title}-navbar`"
-        :to="`/${activeLanguage}/${focusItem.to}`"
-      >
         <v-btn
           v-show="!mobile"
           class="ma-1"
-          color="secondary darken-2"
-          outlined
-          >{{ focusItem.title }}</v-btn
+          :color="isFocusItem(index) ? 'primary' : 'secondary'"
+          :rounded="isFocusItem(index)"
+          :outlined="isFocusItem(index)"
+          >{{ item.title }}</v-btn
         >
       </nuxt-link>
-      <v-btn
-        v-show="!mobile"
-        class="ma-1"
-        color="primary"
-        outlined
-        @click="printState"
-        >Print</v-btn
-      >
     </v-app-bar>
 
+    <!-- Navigation drawer -->
     <v-navigation-drawer v-model="drawer" absolute temporary>
       <v-list nav dense>
         <v-list-item-group
@@ -84,6 +77,7 @@ export default {
     return {
       drawer: false,
       group: null,
+      // links
       items: [
         {
           icon: 'mdi-home',
@@ -92,37 +86,33 @@ export default {
         },
 
         {
-          icon: 'mdi-info',
+          icon: 'mdi-alert-circle',
           title: 'About',
           to: `about`,
         },
         {
-          icon: 'mdi-account',
+          icon: 'mdi-cards-variant',
           title: 'Brands',
           to: `brands`,
         },
+        {
+          icon: 'mdi-human-greeting-proximity',
+          title: 'Contact us',
+          to: `contact`,
+        },
       ],
-      focusItem: {
-        icon: 'mdi-account',
-        title: 'Contact us',
-        to: `contact`,
-      },
 
       title: 'Home',
     }
   },
   fetch() {
-    // console.log('context: ', context)
-    console.log('params: ', this.$route.params)
     try {
       if (
         this.$route.params.lang === undefined ||
         this.$route.params.lang === 'undefined'
       ) {
-        console.log('determined to be undefined')
         this.$store.dispatch('webText/fetchLanguageAndSet', 'en')
       } else {
-        console.log('else')
         this.$store.dispatch(
           'webText/fetchLanguageAndSet',
           this.$route.params.lang
@@ -144,14 +134,12 @@ export default {
     },
   },
   methods: {
-    printState() {
-      console.log(
-        'state active lang: ',
-        this.$store.state.webText.activeLanguage
-      )
-      console.log('state active lang data: ', this.currentLanguageData)
-
-      console.log('this component: ', this.activeLanguage)
+    isFocusItem(index) {
+      if (index === 3) {
+        return true
+      } else {
+        return false
+      }
     },
   },
 }

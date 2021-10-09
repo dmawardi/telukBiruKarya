@@ -1,10 +1,11 @@
 <template>
   <div>
+    <!-- Parallax card -->
     <v-card>
       <v-parallax dark :src="parallaxImage" class="aboutParallax">
         <v-row align="center" justify="center">
           <v-col class="text-center" cols="12">
-            <p class="text-h3 font-italic parallaxHeading">A little</p>
+            <p class="text-h4 font-italic parallaxHeading">A little</p>
             <p class="text-h2 font-weight-black mb-4 parallaxHeading">
               About Us
             </p>
@@ -12,6 +13,7 @@
         </v-row>
       </v-parallax>
     </v-card>
+    <!-- Team information -->
     <v-card class="white mb-5">
       <v-row>
         <v-col cols="12">
@@ -19,6 +21,7 @@
         </v-col>
       </v-row>
       <v-row class="mb-4">
+        <!-- Iterate through team members -->
         <v-col
           v-for="member in team"
           :key="`${member.name}-card`"
@@ -38,6 +41,7 @@
               </v-avatar>
             </v-col>
           </v-row>
+          <!-- Text -->
           <v-card-text>
             <p class="text-caption text-justify">
               <strong> Background: </strong>
@@ -51,6 +55,7 @@
         </v-col>
       </v-row>
       <v-divider></v-divider>
+      <!-- About the company section -->
       <v-row>
         <v-col cols="12">
           <v-card-title class="text-decoration-underline mt-3"
@@ -58,18 +63,18 @@
           >
         </v-col>
       </v-row>
-
+      <!-- Company image -->
       <v-row>
         <v-col cols="12" md="6" class="d-flex align-center">
           <v-img
             class="ma-auto"
             min-height="100px"
             :max-height="mobile ? '200px' : '450px'"
-            min-width="80px"
-            max-width="400px"
-            src="https://picsum.photos/seed/picsum/400/300"
+            max-width="500px"
+            src="/OfficeFront.jpg"
           ></v-img>
         </v-col>
+        <!-- Text section -->
         <v-col cols="12" md="6">
           <v-card class="ma-4 pa-1 elevate" outlined shaped elevation="9">
             <v-card-title>
@@ -89,6 +94,7 @@
       </v-row>
       <br />
       <v-divider></v-divider>
+      <!-- Location section -->
       <v-row>
         <v-col cols="12">
           <v-card-title class="text-decoration-underline"
@@ -103,6 +109,7 @@
               <p class="text-uppercase text-subtitle-1">Home Base</p>
             </v-card-title>
             <v-card-text>
+              <!-- Address container -->
               <v-container>
                 <v-row
                   v-for="(detail, index) in address"
@@ -123,11 +130,12 @@
             </v-card-text>
           </v-card>
         </v-col>
+        <!-- Map image -->
         <v-col cols="12" md="6" class="d-flex align-center justify-center">
-          <div class="mapouter ma-4">
+          <div class="mapouter">
             <div class="gmap_canvas">
               <iframe
-                width="500"
+                width="440"
                 height="280"
                 id="gmap_canvas"
                 src="https://maps.google.com/maps?q=Danoya&t=&z=15&ie=UTF8&iwloc=&output=embed"
@@ -136,32 +144,16 @@
                 marginheight="0"
                 marginwidth="0"
               ></iframe
-              ><a href="https://putlocker-is.org">putlocker</a><br /><style>
-                .mapouter {
-                  position: relative;
-                  text-align: right;
-                  height: 300px;
-                  width: 500px;
-                }</style
-              ><a href="https://www.embedgooglemap.net">google maps api html</a
               ><style>
                 .gmap_canvas {
                   overflow: hidden;
                   background: none !important;
                   height: 300px;
-                  width: 500px;
+                  width: 440px;
                 }
               </style>
             </div>
           </div>
-          <!-- <v-img
-            class="ml-auto mr-auto"
-            min-height="100px"
-            :max-height="mobile ? '200px' : '300px'"
-            min-width="100px"
-            :max-width="mobile ? '250px' : '400px'"
-            src="https://picsum.photos/seed/picsum/400/300"
-          ></v-img> -->
         </v-col>
       </v-row>
     </v-card>
@@ -224,19 +216,9 @@ export default {
     }),
     mobile() {
       return this.$vuetify.breakpoint.xs
-      // if (this.$vuetify.breakpoint.sm || this.$vuetify.breakpoint.xs) {
-      //   return true
-      // } else {
-      //   return false
-      // }
     },
     smallScreen() {
       return this.$vuetify.breakpoint.sm
-      // if (this.$vuetify.breakpoint.sm || this.$vuetify.breakpoint.xs) {
-      //   return true
-      // } else {
-      //   return false
-      // }
     },
   },
 }
@@ -250,6 +232,6 @@ p.addressDetail {
   margin-top: 48px;
 }
 .parallaxHeading {
-  color: #285cff;
+  color: black;
 }
 </style>

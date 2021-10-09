@@ -1,7 +1,8 @@
 <template>
-  <v-card>
+  <v-card class="mt-9 mb-9 pa-1">
     <v-card-title>Brands</v-card-title>
-    <v-row>
+    <v-row class="ma-2">
+      <!-- Iterate through brands -->
       <brand-card
         v-for="(brand, index) in brands"
         :key="`brand-${index}`"
@@ -22,6 +23,10 @@ export default {
           brandName: 'Wild Coko',
           subtext:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam, sapien finibus ultrices tristique, tellus mauris venenatis lectus, ut volutpat diam sem vitae odio.',
+          imgSrc: require('@/static/WildCoko web.png'),
+          imgHeight: '200px',
+          imgWidth: '200px',
+          caption: 'Infused Organic Coconut Oil',
         },
       ],
     }

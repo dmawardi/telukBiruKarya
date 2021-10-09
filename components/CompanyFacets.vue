@@ -2,10 +2,12 @@
   <div>
     <v-row align="center" justify="center">
       <v-col class="text-center" cols="12">
+        <!-- Company Facet card -->
         <v-card class="ma-1" elevation="5">
           <v-container>
             <br />
             <v-row>
+              <!-- Iterate through company facets/aspects -->
               <v-col
                 v-for="(item, index) in companyFacets"
                 :key="`${index}-aspects`"
@@ -13,12 +15,15 @@
                 sm="6"
                 md="4"
               >
+                <!-- Title -->
                 <v-card-title class="justify-center">{{
                   item.aspectTitle
                 }}</v-card-title>
+                <!-- Icon -->
                 <v-icon size="100" :color="item.color" class="iconFade">
                   {{ item.icon }}
                 </v-icon>
+                <!-- Text -->
                 <v-card-text>
                   <p class="text-caption text-justify">
                     {{ item.aspectCaption }}
@@ -28,10 +33,6 @@
             </v-row>
           </v-container>
         </v-card>
-        <v-row>
-          <v-col cols="12" sm="6"> </v-col>
-          <v-col cols="12" sm="6"> </v-col>
-        </v-row>
       </v-col>
     </v-row>
   </div>

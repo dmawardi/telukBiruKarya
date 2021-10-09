@@ -1,6 +1,8 @@
 <template>
   <v-footer color="secondary lighten-1" padless>
+    <!-- Top row -->
     <v-row justify="center" no-gutters>
+      <!-- links -->
       <v-btn
         v-for="link in links"
         :key="`${link.title}=footer`"
@@ -12,6 +14,7 @@
           {{ link.title }}
         </nuxt-link>
       </v-btn>
+      <!-- Bottom row -->
       <v-col class="primary lighten-2 py-4 text-center" cols="12">
         {{ new Date().getFullYear() }} — <strong>Teluk Biru Karya</strong>
       </v-col>
