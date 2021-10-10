@@ -33,6 +33,21 @@ export default {
       ],
     }
   },
+  head() {
+    return {
+      // title for this page
+      title: 'Brands',
+      meta: [
+        {
+          // defines decription for this page
+          hid: 'description',
+          name: 'description',
+          content:
+            'Teluk Biru Karya build unique brands for the niche market. Some examples include: Wild Coko',
+        },
+      ],
+    }
+  },
   computed: {
     ...mapState({
       currentLanguageData: (state) => state.webText.currentLanguageData,

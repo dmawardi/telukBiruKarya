@@ -114,7 +114,7 @@ export default {
           // defines decription for this page
           hid: 'description',
           name: 'description',
-          content: 'Trading company located in Bali, Indonesia',
+          content: `We build unique brands to exceed our customer's expectatioms.  We are based in Bali, Indonesia`,
         },
       ],
     }

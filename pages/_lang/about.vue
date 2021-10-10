@@ -209,6 +209,21 @@ export default {
       ],
     }
   },
+  head() {
+    return {
+      // title for this page
+      title: 'About',
+      meta: [
+        {
+          // defines decription for this page
+          hid: 'description',
+          name: 'description',
+          content:
+            'Established in late-2021, the vision of TBK was to build brands that catered to a premium niche market.  We build brands that have purpose and strive for community.',
+        },
+      ],
+    }
+  },
   computed: {
     ...mapState({
       currentLanguageData: (state) => state.webText.currentLanguageData,
