@@ -44,7 +44,22 @@
       </v-col>
     </v-row>
     <!-- Sections -->
-    <vision-mission />
+    <v-row>
+      <!-- Text section -->
+      <v-col cols="12" sm="9">
+        <v-card class="ma-4 pa-1 elevate" outlined shaped elevation="9">
+          <v-card-title>
+            <p class="text-uppercase text-subtitle-1">Who are we?</p>
+          </v-card-title>
+          <v-card-text>
+            <p class="text-caption text-justify">
+              {{ this.currentLanguageData.data.index.text }}
+            </p>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="12" sm="3" class="black pa-2 pt-2 asideContainer"> </v-col>
+    </v-row>
     <company-facets />
 
     <!-- Email retrieve parallax -->
@@ -135,5 +150,8 @@ export default {
 <style scoped>
 .emailBox {
   max-width: 400px;
+}
+.asideContainer {
+  background-image: url('/VisMisAside.png');
 }
 </style>

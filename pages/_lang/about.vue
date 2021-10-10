@@ -94,6 +94,7 @@
       </v-row>
       <br />
       <v-divider></v-divider>
+      <vision-mission />
       <!-- Location section -->
       <v-row>
         <v-col cols="12">
@@ -162,9 +163,12 @@
 
 <script>
 import { mapState } from 'vuex'
+import VisionMission from '@/components/VisionMission.vue'
 
 export default {
-  components: {},
+  components: {
+    VisionMission,
+  },
   data() {
     return {
       parallaxImage: require('@/static/AboutParallax.png'),
@@ -185,8 +189,7 @@ export default {
           mail: 'dMawardi@telukbirukarya.com',
           initials: 'DM',
           imageSrc: require('@/static/DM Profile.png'),
-          background:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam, sapien finibus ultrices tristique.',
+          background: 'Accounting/Finance, Data Science, & Web Programming',
         },
       ],
       address: [

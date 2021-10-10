@@ -19,15 +19,15 @@
 
       <!-- Title text -->
       <v-app-bar-title
-        v-show="!mobile"
+        v-show="!smallScreen"
         mobile-break-point="1264"
         :class="
           this.$vuetify.breakpoint.sm
             ? 'primary--text text-subtitle-2'
-            : 'primary--text'
+            : 'primary--text text-no-wrap'
         "
       >
-        Teluk Biru Karya
+        <div>Teluk Biru Karya</div>
       </v-app-bar-title>
 
       <v-spacer v-show="!mobile"></v-spacer>
@@ -215,10 +215,14 @@ nav {
   padding: 2px;
   border-radius: 5px;
 }
-
+/* 
 .buttonContainer {
-  max-width: 70%;
+  max-width: 65%;
 }
+
+.v-app-bar-title__content {
+  width: 146px;
+} */
 .v-toolbar__content {
   min-height: 70px;
 }
