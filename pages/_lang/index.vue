@@ -26,18 +26,22 @@
               <p
                 :class="
                   mobile
-                    ? 'text-subtitle white--text ma-4'
-                    : 'text-h6 white--text ma-4'
+                    ? 'text-subtitle white--text ma-0'
+                    : 'text-h6 white--text ma-0'
                 "
               >
-                "Innovation distinguishes between a leader and a follower"
+                Our Brands
               </p>
             </v-col>
           </v-row>
           <v-row>
-            <v-col cols="7"></v-col>
-            <v-col cols="5">
-              <p class="mr-4 text-subtitle white--text">-Steve Jobs</p>
+            <v-col cols="12">
+              <v-img
+                class="ml-auto mr-auto mb-2"
+                src="/WildCoko web.PNG"
+                max-height="80px"
+                max-width="80px"
+              ></v-img>
             </v-col>
           </v-row>
         </v-card>

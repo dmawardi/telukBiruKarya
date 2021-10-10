@@ -11,9 +11,7 @@
                 <v-col cols="12">
                   <v-img
                     class="ml-auto mr-auto"
-                    :height="brand.imgHeight"
-                    :width="brand.imgWidth"
-                    :src="brand.imgSrc"
+                    src="/WildCoko web.PNG"
                   ></v-img>
                 </v-col>
               </v-row>
