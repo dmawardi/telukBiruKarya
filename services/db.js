@@ -11,7 +11,7 @@ export default {
           aspectTitle: 'Targeted',
           icon: 'mdi-bullseye-arrow',
           aspectCaption:
-            'Every problem deserves its own targeted approach.  We understand that proper due diligence must be made into industries to gain the knowledge required to ',
+            'Every problem deserves its own targeted approach.  We understand that proper due diligence must be made into industries to gain the knowledge required to solve problems effectively and create long-term solutions',
           color: 'red',
         },
         {
@@ -19,7 +19,7 @@ export default {
           icon: 'mdi-palette',
           aspectCaption:
             'We incorporate creative decision making into our DNA here at PT TBK.  We aim to solve problems in unique ways in order to create an offering of products unparalled by other industry players',
-          color: 'grey',
+          color: 'primary',
         },
         {
           aspectTitle: 'Experienced',
@@ -56,50 +56,50 @@ export default {
   },
   id: {
     index: {
-      text: 'PT Teluk Biru Karya is a ',
+      text: 'PT Teluk Biru Karya adalah perusahaan inovatif yang memproduksi dan bekerja/berkonsultasi dengan organisasi lain untuk menghasilkan produk yang disukai pelanggan. Dalam dunia harga yang semakin kompetitif, PT TBK menonjol sebagai pemain yang bertujuan untuk mencapai nilai bagi pasar premium. Melalui tantangan paradigma saat ini, PT TBK bertujuan untuk memberikan penawaran yang menangkap imajinasi pelanggan kami dan menanggapi kebutuhan mereka dengan cara yang benar-benar berbeda. Kami selalu terbuka untuk bekerja sama dengan mitra baru, jadi jangan ragu untuk menghubungi kami menggunakan formulir Kontak di situs web ini!',
       vision:
-        'To inspire the community to be kind through providing a compelling focus on long term balance',
+        'Untuk menginspirasi masyarakat agar berbaik hati dengan memberikan fokus yang menarik pada keseimbangan jangka panjang',
       mission:
-        'We strive to build unique brands by challenging the status quo and adventuring through the uncharted',
+        'Kami berusaha untuk membangun merek yang unik dengan menantang status quo dan bertualang melalui yang belum dipetakan',
       companyFacets: [
         {
-          aspectTitle: 'Aspect 1',
+          aspectTitle: 'Ditargetkan',
           icon: 'mdi-bullseye-arrow',
           aspectCaption:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+            'Setiap masalah layak mendapatkan pendekatan yang ditargetkan. Kami memahami bahwa uji tuntas yang tepat harus dilakukan dalam industri untuk mendapatkan pengetahuan yang diperlukan untuk untuk memecahkan masalah secara efektif dan menciptakan solusi jangka panjang',
           color: 'red',
         },
         {
-          aspectTitle: 'Aspect 2',
-          icon: 'mdi-mouse',
+          aspectTitle: 'Kreatif',
+          icon: 'mdi-palette',
           aspectCaption:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-          color: 'grey',
+            'Kami menggabungkan pengambilan keputusan yang kreatif ke dalam DNA kami di PT TBK. Kami bertujuan untuk memecahkan masalah dengan cara yang unik untuk menciptakan penawaran produk yang tak tertandingi oleh pemain industri lainnya',
+          color: 'primary',
         },
         {
-          aspectTitle: 'Aspect 3',
+          aspectTitle: 'Berpengalaman',
           icon: 'mdi-chart-areaspline',
           aspectCaption:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+            'PT Teluk Biru Karya luar biasa mampu menavigasi medan baru dan menantang. Pengalaman gabungan dari anggota tim kami akan memastikan bahwa PT TBK akan berkembang di masa depan yang semakin tidak terduga',
           color: 'black',
         },
       ],
     },
     contact: {
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam, sapien finibus ultrices tristique, tellus mauris venenatis lectus, ut volutpat diam sem vitae odio. Maecenas vel rutrum massa, in placerat metus. Nullam euismod risus ipsum, non laoreet tellus condimentum ac. Quisque luctus ligula eget tortor euismod, quis gravida massa euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      text: 'Silakan gunakan formulir di bawah ini untuk menghubungi kami dengan pertanyaan bisnis apa pun yang mungkin Anda miliki. Kami selalu terbuka untuk berkolaborasi dalam proyek baru dengan mitra yang berpikiran sama!',
     },
     about: {
       aboutSubtitle:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam, sapien finibus ultrices tristique, tellus mauris venenatis lectus, ut volutpat diam sem vitae odio',
+        'Di PT TBK, kami percaya dalam bekerja cerdas, menantang asumsi, & mengeksekusi dengan presisi',
       aboutText:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam, sapien finibus ultrices tristique, tellus mauris venenatis lectus, ut volutpat diam sem vitae odio. Maecenas vel rutrum massa, in placerat metus. Nullam euismod risus ipsum, non laoreet tellus condimentum ac. Quisque luctus ligula eget tortor euismod, quis gravida massa euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam, sapien finibus ultrices tristique, tellus mauris venenatis lectus, ut volutpat diam sem vitae odio. Maecenas vel rutrum massa, in placerat metus. Nullam euismod risus ipsum, non laoreet tellus condimentum ac. Quisque luctus ligula eget tortor euismod, quis gravida massa euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        'PT TBK didirikan pada September 2021, oleh pendirinya: Danar Mawardi & Calvin Santoso. Hal ini untuk menjawab kebutuhan pasar akan produk yang memberikan keberlanjutan dan keseimbangan bagi masyarakat luas. Dengan dunia yang semakin fokus pada jangka pendek, PT TBK bertujuan untuk membangun produk yang tahan lama yang memiliki pelanggan setia. Kami melakukan ini melalui penelitian terperinci dan membangun merek unik yang menangkap imajinasi komunitas. Kami berharap dapat menciptakan perubahan yang berdampak dan positif dalam industri tempat kami beroperasi, dengan menantang status quo saat ini dan menemukan cara yang lebih baik.',
     },
     brands: {
       list: [
         {
           brandName: 'Wild Coko',
           subtext:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam, sapien finibus ultrices tristique, tellus mauris venenatis lectus, ut volutpat diam sem vitae odio. Maecenas vel rutrum massa, in placerat metus.',
+            'Merek minyak kelapa infus organik premium. Saat ini hadir dalam pilihan Citrus atau Vanilla.',
           imgSrc: require('@/static/WildCoko web.png'),
           imgHeight: '200px',
           imgWidth: '200px',

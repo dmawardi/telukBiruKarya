@@ -11,7 +11,7 @@
       <v-col cols="12" sm="7" class="d-flex">
         <v-row>
           <v-col>
-            <p class="text-subtitle">Mission</p>
+            <p class="text-subtitle ml-3">Mission</p>
           </v-col>
         </v-row>
         <v-row>
@@ -43,7 +43,7 @@
       <v-col cols="12" sm="7" class="d-flex">
         <v-row>
           <v-col>
-            <p class="text-subtitle">Vision</p>
+            <p class="text-subtitle ml-3">Vision</p>
           </v-col>
         </v-row>
         <v-row>

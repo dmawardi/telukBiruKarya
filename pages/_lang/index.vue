@@ -7,7 +7,7 @@
           <v-row align="center" justify="center" class="ma-0 pa-0">
             <v-col cols="12">
               <p class="text-h4 font-weight-bold mb-4 text-uppercase">
-                Innovation magnified
+                Innovation balanced
               </p>
               <nuxt-link :to="`/${this.activeLanguage}/contact`">
                 <v-btn color="secondary" outlined large> Contact us </v-btn>
@@ -21,18 +21,20 @@
       <v-col cols="12" class="ma-0 pa-0">
         <!-- Banner -->
         <v-card color="primary lighten-1" min-height="140px" class="ma-0 pa-0">
-          <v-row>
-            <v-col class="d-flex align-center justify-center">
+          <v-row class="d-flex align-center justify-center">
+            <v-col cols="4" sm="5"><hr class="horizontalLine" /> </v-col>
+            <v-col cols="4" sm="2">
               <p
                 :class="
                   mobile
-                    ? 'text-subtitle white--text ma-0'
-                    : 'text-h6 white--text ma-0'
+                    ? 'text-subtitle white--text ma-0 text-center'
+                    : 'text-h6 white--text ma-0 text-center'
                 "
               >
                 Our Brands
               </p>
             </v-col>
+            <v-col cols="4" sm="5"> <hr class="horizontalLine" /> </v-col>
           </v-row>
           <v-row>
             <v-col cols="12">
@@ -106,11 +108,9 @@
 <script>
 import { mapState } from 'vuex'
 import CompanyFacets from '~/components/CompanyFacets.vue'
-import VisionMission from '@/components/VisionMission.vue'
 export default {
   components: {
     CompanyFacets,
-    VisionMission,
   },
   data() {
     return {
@@ -157,5 +157,11 @@ export default {
 }
 .asideContainer {
   background-image: url('/VisMisAside.png');
+}
+
+.horizontalLine {
+  width: 100%;
+  text-align: center;
+  margin-left: 0;
 }
 </style>

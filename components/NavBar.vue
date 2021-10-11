@@ -8,14 +8,18 @@
       ></v-app-bar-nav-icon>
 
       <!-- Image -->
-      <v-img
+      <nuxt-link
+        :to="`/${this.$route.params.lang}`"
         class="ml-auto mr-auto pa-0"
-        min-height="40px"
-        max-height="50"
-        max-width="50"
-        min-width="40px"
-        src="/Teluk_Biru_Web.PNG"
-      ></v-img>
+      >
+        <v-img
+          min-height="40px"
+          max-height="50"
+          max-width="50"
+          min-width="40px"
+          src="/Teluk_Biru_Web.PNG"
+        ></v-img>
+      </nuxt-link>
 
       <!-- Title text -->
       <v-app-bar-title
@@ -27,7 +31,7 @@
             : 'primary--text text-no-wrap'
         "
       >
-        <div>Teluk Biru Karya</div>
+        <div class="text-no-wrap">Teluk Biru Karya</div>
       </v-app-bar-title>
 
       <v-spacer v-show="!mobile"></v-spacer>
@@ -215,15 +219,14 @@ nav {
   padding: 2px;
   border-radius: 5px;
 }
-/* 
-.buttonContainer {
-  max-width: 65%;
+.companyText {
+  min-width: 150px;
 }
 
 .v-app-bar-title__content {
   width: 146px;
-} */
-.v-toolbar__content {
+}
+*/ .v-toolbar__content {
   min-height: 70px;
 }
 </style>
