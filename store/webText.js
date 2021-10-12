@@ -19,16 +19,13 @@ export const mutations = {
 export const actions = {
   fetchLanguageAndSet(context, language) {
     try {
-      console.log('State language request to:', language)
-
+      // if language detected, set to state
       if (language !== undefined || language !== 'undefined') {
         context.commit('SET_ACTIVE_LANGUAGE', language)
-        console.log('set active complete')
         const languageData = db[language]
         return context.commit('SET_LANGUAGE_DATA', languageData)
       } else {
-        console.log('setting default')
-
+        // Set default
         context.commit('SET_ACTIVE_LANGUAGE', 'en')
         const languageData = db.en
         return context.commit('SET_LANGUAGE_DATA', languageData)

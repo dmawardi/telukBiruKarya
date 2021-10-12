@@ -153,9 +153,8 @@ export default {
           this.$route.params.lang
         )
       }
-      setToggleLangToStateActiveLang()
+      this.setToggleLangToStateActiveLang()
     } catch (e) {
-      console.log('caught error')
       throw new Error('Unable to detect language.')
     }
   },

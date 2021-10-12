@@ -171,7 +171,7 @@ export default {
   },
   data() {
     return {
-      parallaxImage: require('@/static/AboutParallax.png'),
+      parallaxImage: require('@/static/AboutParallax.jpg'),
       team: [
         {
           name: 'Calvin Santoso',
