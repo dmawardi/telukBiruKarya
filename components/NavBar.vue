@@ -153,6 +153,7 @@ export default {
           this.$route.params.lang
         )
       }
+
       this.setToggleLangToStateActiveLang()
     } catch (e) {
       throw new Error('Unable to detect language.')
@@ -190,9 +191,9 @@ export default {
     // Grab the current active language from state and set toggle appropriately
     setToggleLangToStateActiveLang() {
       if (this.activeLanguage === 'en') {
-        this.toggleLanguage = 1
-      } else if (this.activeLanguage === 'id') {
         this.toggleLanguage = 0
+      } else if (this.activeLanguage === 'id') {
+        this.toggleLanguage = 1
       }
     },
     grabCurrentRouteAndPushToActiveLangVersion() {
