@@ -27,7 +27,7 @@
         mobile-break-point="1264"
         :class="
           this.$vuetify.breakpoint.sm
-            ? 'primary--text text-subtitle-2'
+            ? 'primary--text text-subtitle-2 text-no-wrap'
             : 'primary--text text-no-wrap'
         "
       >
@@ -223,9 +223,10 @@ nav {
   min-width: 150px;
 }
 
-.v-app-bar-title__content {
-  width: 146px;
+.v-app-bar-title__placeholder {
+  visibility: hidden !important;
 }
+
 */ .v-toolbar__content {
   min-height: 70px;
 }
