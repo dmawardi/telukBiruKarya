@@ -65,7 +65,7 @@
       </v-row>
       <!-- Company image -->
       <v-row>
-        <v-col cols="12" md="6" class="d-flex align-center">
+        <v-col cols="12" md="6" class="d-flex align-center mb-3">
           <v-img
             class="ma-auto"
             min-height="100px"

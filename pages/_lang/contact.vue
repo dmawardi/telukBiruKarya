@@ -1,7 +1,5 @@
 <template>
-  <v-card class="mt-9 mb-9">
-    <contact-form />
-  </v-card>
+  <contact-form />
 </template>
 
 <script>

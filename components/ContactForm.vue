@@ -1,21 +1,21 @@
 <template>
   <v-form v-model="valid">
     <v-container>
-      <v-row>
-        <v-col cols="12">
-          <v-card-title>Contact Us</v-card-title>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="12">
-          <!-- Text section -->
-          <v-card-text>{{
-            this.currentLanguageData.data.contact.text
-          }}</v-card-text>
-        </v-col>
-      </v-row>
-      <!-- Form -->
-      <v-card class="pa-4 mb-5 elevation-5">
+      <v-card class="pa-4 mb-5 mt-5 elevation-5">
+        <v-row>
+          <v-col cols="12">
+            <v-card-title>Contact Us</v-card-title>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col cols="12">
+            <!-- Text section -->
+            <v-card-text>{{
+              this.currentLanguageData.data.contact.text
+            }}</v-card-text>
+          </v-col>
+        </v-row>
+        <!-- Form -->
         <v-row>
           <v-col cols="12" sm="6">
             <v-row>
