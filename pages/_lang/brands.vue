@@ -25,7 +25,7 @@ export default {
           brandName: 'Wild Coko',
           subtext:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam, sapien finibus ultrices tristique, tellus mauris venenatis lectus, ut volutpat diam sem vitae odio.',
-          imgSrc: require('@/static/WildCoko web.png'),
+          imgSrc: require('@/static/WildCoko_web.png'),
           imgHeight: '200px',
           imgWidth: '200px',
           caption: 'Infused Organic Coconut Oil',

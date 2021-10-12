@@ -45,7 +45,7 @@ export default {
           brandName: 'Wild Coko',
           subtext:
             'A premium organic infused coconut oil brand.  Currently comes in a selection of Citrus or Vanilla. ',
-          imgSrc: require('@/static/WildCoko web.png'),
+          imgSrc: require('@/static/WildCoko_web.png'),
           imgHeight: '200px',
           imgWidth: '200px',
           caption: 'Infused Organic Coconut Oil',
@@ -100,7 +100,7 @@ export default {
           brandName: 'Wild Coko',
           subtext:
             'Merek minyak kelapa infus organik premium. Saat ini hadir dalam pilihan Citrus atau Vanilla.',
-          imgSrc: require('@/static/WildCoko web.png'),
+          imgSrc: require('@/static/WildCoko_web.png'),
           imgHeight: '200px',
           imgWidth: '200px',
           caption: 'Infused Organic Coconut Oil',

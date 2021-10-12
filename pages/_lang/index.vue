@@ -40,7 +40,7 @@
             <v-col cols="12">
               <v-img
                 class="ml-auto mr-auto mb-2"
-                src="/WildCoko web.PNG"
+                src="/WildCoko_web.PNG"
                 max-height="80px"
                 max-width="80px"
               ></v-img>
