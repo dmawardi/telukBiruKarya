@@ -78,7 +78,7 @@
           <nuxt-link
             v-for="(item, index) in items"
             :key="`${index}-navdrawer`"
-            :to="item.to"
+            :to="`/${activeLanguage}/${item.to}`"
           >
             <v-list-item>
               <v-list-item-icon>
