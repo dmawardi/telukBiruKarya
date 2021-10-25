@@ -36,11 +36,19 @@
             </v-col>
             <v-col cols="4" sm="5"> <hr class="horizontalLine" /> </v-col>
           </v-row>
-          <v-row>
-            <v-col cols="12">
+          <v-row class="justify-center">
+            <v-col cols="2">
               <v-img
                 class="ml-auto mr-auto mb-2"
                 src="/WildCoko_web.PNG"
+                max-height="80px"
+                max-width="80px"
+              ></v-img>
+            </v-col>
+            <v-col cols="2">
+              <v-img
+                class="ml-auto mr-auto mb-2"
+                src="/CadesCoin_Logo.png"
                 max-height="80px"
                 max-width="80px"
               ></v-img>
