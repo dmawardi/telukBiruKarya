@@ -31,7 +31,7 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            'PT Teluk Biru Karya is a producer of premium unique brands based in Bali, Indonesia',
+            'PT Teluk Biru Karya is a producer of premium unique brands. Based in Bali, Indonesia',
         },
       ],
     }

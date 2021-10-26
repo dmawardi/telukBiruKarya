@@ -19,19 +19,7 @@ import BrandCard from '@/components/BrandCard.vue'
 export default {
   components: { BrandCard },
   data() {
-    return {
-      brands: [
-        {
-          brandName: 'Wild Coko',
-          subtext:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam, sapien finibus ultrices tristique, tellus mauris venenatis lectus, ut volutpat diam sem vitae odio.',
-          imgSrc: require('@/static/WildCoko_web.PNG'),
-          imgHeight: '200px',
-          imgWidth: '200px',
-          caption: 'Infused Organic Coconut Oil',
-        },
-      ],
-    }
+    return {}
   },
   head() {
     return {
@@ -42,8 +30,7 @@ export default {
           // defines decription for this page
           hid: 'description',
           name: 'description',
-          content:
-            'Teluk Biru Karya build unique brands for the niche market. Some examples include: Wild Coko',
+          content: `Teluk Biru Karya builds unique brands for the niche market. Examples include: Wild Coko & Cade's Drinks`,
         },
       ],
     }

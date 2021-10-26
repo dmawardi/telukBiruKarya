@@ -43,7 +43,7 @@
           </v-row>
           <!-- Text -->
           <v-card-text>
-            <p class="text-caption text-justify">
+            <p class="text-caption text-center">
               <strong> Background: </strong>
               {{ member.background }}
             </p>
@@ -180,8 +180,7 @@ export default {
           initials: 'CS',
           imageSrc: require('@/static/CS Profile.png'),
 
-          background:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam, sapien finibus ultrices tristique.',
+          background: 'Human Resources & Accommodation Management',
         },
         {
           name: 'Danar Mawardi',

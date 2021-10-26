@@ -119,7 +119,7 @@ export default {
         {
           brandName: `Cade's`,
           subtext:
-            'A premium organic connoisseur juice brand.  The first flavor is titled Citrone, which is a blend of both Orange and Lemon juice to produce a unique flavor.  Great for a refreshing kick or to mix.',
+            'Merek premium untuk penikmat jus organik. Rasa pertama bertajuk Citrone yang merupakan perpaduan antara jus Jeruk dan Lemon sehingga menghasilkan cita rasa yang unik. Bagus untuk sensasi yang menyegarkan atau untuk campuran.',
           imgSrc: require('@/static/CadesCoin_Logo.png'),
           imgHeight: '200px',
           imgWidth: '200px',
