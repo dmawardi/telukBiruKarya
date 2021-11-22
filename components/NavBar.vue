@@ -1,5 +1,5 @@
 <template>
-  <div class="nav">
+  <v-container class="nav">
     <v-app-bar min-height="70px" color="white" fixed elevate-on-scroll>
       <!-- Burger icon (shown when mobile) -->
       <v-app-bar-nav-icon
@@ -34,7 +34,7 @@
         <div class="text-no-wrap">Teluk Biru Karya</div>
       </v-app-bar-title>
 
-      <v-spacer v-show="!mobile"></v-spacer>
+      <!-- <v-spacer v-show="!mobile"></v-spacer> -->
       <!-- Buttons appear if not on mobile -->
       <v-container v-show="!mobile" class="buttonContainer">
         <v-row no-gutters v-show="!smallScreen">
@@ -69,7 +69,7 @@
     </v-app-bar>
 
     <!-- Navigation drawer -->
-    <v-navigation-drawer v-model="drawer" absolute temporary>
+    <v-navigation-drawer v-model="drawer" app>
       <v-list nav dense>
         <v-list-item-group
           v-model="group"
@@ -100,7 +100,7 @@
         </v-container>
       </v-list>
     </v-navigation-drawer>
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -229,5 +229,12 @@ nav {
 
 */ .v-toolbar__content {
   min-height: 70px;
+}
+
+.navDrawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
 }
 </style>
